@@ -8,7 +8,8 @@ class CalculatorController extends GetxController {
   var operacion     = ''.obs;
   var segundoNumero = ''.obs;
   var signoResult   = ''.obs;
-  var resultado     = '0'.obs; 
+  var resultado     = '0'.obs;
+  
 
   //método restablece todos los valores de la
   resetAll() {

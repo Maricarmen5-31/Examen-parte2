@@ -2,9 +2,11 @@ import 'package:flutter_calculadora/screens/calculadora_screen.dart';
 import 'package:flutter/material.dart';
 
  
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
  
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       home: CalculadoraScreen(),
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Color.fromARGB(255, 239, 244, 249)
+        scaffoldBackgroundColor: const Color.fromARGB(255, 239, 244, 249)
       ),
     );
   }

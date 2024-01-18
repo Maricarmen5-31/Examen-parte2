@@ -13,6 +13,7 @@ class CalculadoraButton extends StatelessWidget {
     textColor, 
     required this.texto, 
     required this.onPressed
+    
   }): fondoColor = bgColor ?? Colors.white,
       textoColor = textColor ?? Colors.black,
       super(key: key);

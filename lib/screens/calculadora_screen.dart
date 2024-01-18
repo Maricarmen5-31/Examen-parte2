@@ -27,37 +27,16 @@ class CalculadoraScreen extends StatelessWidget {
                 child: Container(),
               ),
               
-              CalculoMat(),
+              CalculoMat(),                    
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CalculadoraButton( 
+                  Expanded(child: CalculadoraButton( 
                     texto: 'C',
                     bgColor: const Color.fromARGB(255, 231, 233, 243),
                     onPressed: () => calculatorCtrl.resetAll(),
-                  ),                  
-                ],
-              ),                         
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CalculadoraButton( 
-                    texto: '1/x',
-                    bgColor: const Color.fromARGB(255, 231, 233, 243),
-                    onPressed: () => calculatorCtrl.calcularFraccion(),
-                  ),
-                  CalculadoraButton( 
-                    texto: 'x*2',
-                    bgColor: const Color.fromARGB(255, 231, 233, 243),
-                    onPressed: () => calculatorCtrl.calcularPotencia2(),
-                  ),
-                  CalculadoraButton( 
-                    texto: 'sqr(x)',
-                    bgColor: const Color.fromARGB(255, 231, 233, 243),
-                    onPressed: () => calculatorCtrl.calcularRaiz2(),
-                  ),
+                  )),             
                   CalculadoraButton( 
                     texto: '/',
                     bgColor: const Color.fromARGB(255, 231, 233, 243),
