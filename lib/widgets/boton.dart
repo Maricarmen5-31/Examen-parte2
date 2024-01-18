@@ -27,22 +27,22 @@ class CalculadoraButton extends StatelessWidget {
     );
 
     return Container(
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
-        border: Border.all(width: 3, color: const Color.fromARGB(255, 198, 198, 198)),
-      ),
-      margin: const EdgeInsets.only( bottom: 10, right: 3, left: 3 ),
-      child: TextButton(
-        style: buttonStyle,
-        child: SizedBox(
-          width: 95,
-          height: 65,
-          child: Center(
-            child: Text( texto , style: const TextStyle( fontSize: 30, fontWeight: FontWeight.w300 ),)
-          ),
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
+          border: Border.all(width: 3, color: const Color.fromARGB(255, 198, 198, 198)),
         ),
-        onPressed: () => onPressed(),
-      ),
+        margin: const EdgeInsets.only( bottom: 10, right: 3, left: 3 ),
+        child: TextButton(
+          style: buttonStyle,
+          child: SizedBox(
+            width: 95,
+            height: 65,
+            child: Center(
+              child: Text( texto , style: const TextStyle( fontSize: 30, fontWeight: FontWeight.w300 ),)
+            ),
+          ),
+          onPressed: () => onPressed(),
+        ),
     );
   }
 }
