@@ -15,7 +15,7 @@ class CalculadoraScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold( //estructura de la calculadora
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 38, 108, 136),
+        backgroundColor: const Color.fromARGB(255, 31, 95, 169),
         title: const Text('Calculadora', style: TextStyle(color: Colors.white),),
       ),
       body: SafeArea( //se asegura que no se sobrepongan los elementos
@@ -48,45 +48,30 @@ class CalculadoraScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CalculadoraButton( 
-                    texto: '7',
-                    onPressed: () => calculatorCtrl.addNumero('7'),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '7',
+                      onPressed: () => calculatorCtrl.addNumero('7'),
+                    ),
                   ),
-                  CalculadoraButton( 
-                    texto: '8',
-                    onPressed: () => calculatorCtrl.addNumero('8'),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '8',
+                      onPressed: () => calculatorCtrl.addNumero('8'),
+                    ),
                   ),
-                  CalculadoraButton( 
-                    texto: '9',
-                    onPressed: () => calculatorCtrl.addNumero('9'),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '9',
+                      onPressed: () => calculatorCtrl.addNumero('9'),
+                    ),
                   ),
-                  CalculadoraButton( 
-                    texto: 'X',
-                    bgColor: const Color.fromARGB(255, 231, 233, 243),
-                    onPressed: () => calculatorCtrl.seleccionarOperacion('X'),
-                  ),
-                ],
-              ),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CalculadoraButton( 
-                    texto: '4', 
-                    onPressed: () => calculatorCtrl.addNumero('4'),
-                  ),
-                  CalculadoraButton( 
-                    texto: '5', 
-                    onPressed: () => calculatorCtrl.addNumero('5'),
-                  ),
-                  CalculadoraButton( 
-                    texto: '6', 
-                    onPressed: () => calculatorCtrl.addNumero('6'),
-                  ),
-                  CalculadoraButton( 
-                    texto: '-',
-                    bgColor: const Color.fromARGB(255, 231, 233, 243),
-                    onPressed: () => calculatorCtrl.seleccionarOperacion('-'),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: 'X',
+                      bgColor: const Color.fromARGB(255, 231, 233, 243),
+                      onPressed: () => calculatorCtrl.seleccionarOperacion('X'),
+                    ),
                   ),
                 ],
               ),
@@ -94,22 +79,30 @@ class CalculadoraScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CalculadoraButton( 
-                    texto: '1', 
-                    onPressed: () => calculatorCtrl.addNumero('1'),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '4', 
+                      onPressed: () => calculatorCtrl.addNumero('4'),
+                    ),
                   ),
-                  CalculadoraButton( 
-                    texto: '2', 
-                    onPressed: () => calculatorCtrl.addNumero('2'),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '5', 
+                      onPressed: () => calculatorCtrl.addNumero('5'),
+                    ),
                   ),
-                  CalculadoraButton( 
-                    texto: '3', 
-                    onPressed: () => calculatorCtrl.addNumero('3'),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '6', 
+                      onPressed: () => calculatorCtrl.addNumero('6'),
+                    ),
                   ),
-                  CalculadoraButton(
-                    texto: '+',  
-                    bgColor: const Color.fromARGB(255, 231, 233, 243),
-                    onPressed: () => calculatorCtrl.seleccionarOperacion('+'),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '-',
+                      bgColor: const Color.fromARGB(255, 231, 233, 243),
+                      onPressed: () => calculatorCtrl.seleccionarOperacion('-'),
+                    ),
                   ),
                 ],
               ),
@@ -117,23 +110,62 @@ class CalculadoraScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CalculadoraButton( 
-                    texto: '+/-',
-                    onPressed: () => calculatorCtrl.cambiarNegativoPositivo(),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '1', 
+                      onPressed: () => calculatorCtrl.addNumero('1'),
+                    ),
                   ),
-                  CalculadoraButton( 
-                    texto: '0',
-                    onPressed: () => calculatorCtrl.addNumero('0'),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '2', 
+                      onPressed: () => calculatorCtrl.addNumero('2'),
+                    ),
                   ),
-                  CalculadoraButton( 
-                    texto: '.', 
-                    onPressed: () => calculatorCtrl.addDecimalPoint(),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '3', 
+                      onPressed: () => calculatorCtrl.addNumero('3'),
+                    ),
                   ),
-                  CalculadoraButton( 
-                    texto: '=',
-                    bgColor: const Color.fromARGB(255, 38, 108, 136),
-                    textColor: Colors.white,
-                    onPressed: () => calculatorCtrl.calcularResultado(),
+                  Expanded(
+                    child: CalculadoraButton(
+                      texto: '+',  
+                      bgColor: const Color.fromARGB(255, 231, 233, 243),
+                      onPressed: () => calculatorCtrl.seleccionarOperacion('+'),
+                    ),
+                  ),
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '+/-',
+                      onPressed: () => calculatorCtrl.cambiarNegativoPositivo(),
+                    ),
+                  ),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '0',
+                      onPressed: () => calculatorCtrl.addNumero('0'),
+                    ),
+                  ),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '.', 
+                      onPressed: () => calculatorCtrl.addDecimalPoint(),
+                    ),
+                  ),
+                  Expanded(
+                    child: CalculadoraButton( 
+                      texto: '=',
+                      bgColor: const Color.fromARGB(255, 31, 95, 169),
+                      textColor: Colors.white,
+                      onPressed: () => calculatorCtrl.calcularResultado(),
+                    ),
                   ),
                 ],
               ),
